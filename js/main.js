@@ -39,9 +39,21 @@ const {createApp} = Vue;
             }
         },
         methods:{
-            // nuova voce nella lista 
+            // nuova voce nella lista, se più corta di 5 caratteri non viene aggiunta
             addTask(){
-                this.tasks.push({text:this.newTask});
+                if(this.newTask.length < 5 || this.newTask === ''){ 
+                    // messagio di errore 
+                    this.error = true;
+                } else{
+                    // con push aggiunge la nuova voce alla fine della lista
+                    // this.tasks.push({text:this.newTask});
+                    // con unshift le aggiunge in cima
+                    this.tasks.unshift({text:this.newTask});
+                    // messaggio di errore 
+                    this.error = false;
+                }
+
+
             }
         }
    
