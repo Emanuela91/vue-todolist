@@ -38,5 +38,11 @@ const {createApp} = Vue;
                 ]
             }
         },
+        methods:{
+            // nuova voce nella lista 
+            addTask(){
+                this.tasks.push({text:this.newTask});
+            }
+        }
    
     }).mount('#myapp')
