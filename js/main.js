@@ -21,15 +21,20 @@ const {createApp} = Vue;
         data() {
             return {
                 imageLogo: './img/To-Do.jpg' ,
+                newTask: '',
+                activeItem: 0,
                 tasks: [
                     { 
-                        text: 'Fare i compiti', done: false 
+                        text: 'Fare i compiti', 
+                        done: false
                     }, 
                     { 
-                        text: 'Fare la spesa', done: true 
+                        text: 'Fare la spesa', 
+                        done: true 
                     }, 
                     { 
-                        text: 'Fare il bucato', done: false 
+                        text: 'Fare il bucato', 
+                        done: false 
                     }
                 ]
             }

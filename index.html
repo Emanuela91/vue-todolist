@@ -8,10 +8,27 @@
     <title>ToDo List</title>
 </head>
 <body>
- 
+    
     <div id="myapp" class="container">
+        <!-- Logo -->
         <div class="logo">
             <img :src="imageLogo" alt="ToDo">
+        </div>
+
+        <!-- Input per aggiungere i nuovi task e il bottone aggiungi -->
+        <div class="new_task">
+            <input type="text" placeholder="Aggiungi alla lista">
+            <button @click="addTask">Aggiungi</button>
+        </div>
+
+        <!-- Lista dei Tasks -->
+        <div class="list">
+            <ul>
+                <li v-for="text in tasks">
+                    {{tasks.text}}
+                </li>
+            </ul>
+
         </div>
 
 
