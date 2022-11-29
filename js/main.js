@@ -22,7 +22,6 @@ const {createApp} = Vue;
             return {
                 imageLogo: './img/To-Do.jpg' ,
                 newTask: '',
-                activeItem: 0,
                 tasks: [
                     { 
                         text: 'Fare i compiti', 
